@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户增删查改</title>
+</head>
+<body>
+<div class="container">
+    <div class="contentDiv">
+        <table>
+            <thead>
+            <tr>
+                <th>用户编号</th>
+                <th>名称</th>
+                <th>管理</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="user: ${userList}">
+                <th th:text="${user.Id}"></th>
+                <th th:text="${user.Name}"></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
